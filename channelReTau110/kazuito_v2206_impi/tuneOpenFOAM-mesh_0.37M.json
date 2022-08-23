@@ -1,0 +1,24 @@
+{
+    "mesh.sh":
+    {
+	"mx": [ 120 ],
+	"my": [ 65 ],
+	"mz": [ 48 ]
+    },
+    "decomposeParDict.sh":
+    {
+	"decomposeParDict_node": [ 1, 2, 4, 8 ],
+	"decomposeParDict_ppn": [ 36 ],
+	"decomposeParDict_method": [ "scotch" ]
+    },
+    "solver.sh":
+    {
+	"fvSolution_solvers_p_relTol": [ 0.05 ],
+	"fvSolution_solvers_p_solver": [ "PCG" ],
+	"fvSolution_solvers_p_preconditioner": [ "DIC" ],
+	"fvSolution_solvers_pFinal_solver": [ "PCG" ],
+	"fvSolution_solvers_pFinal_preconditioner": [ "DIC" ],
+	"fvSolution_solvers_UFinal_solver": [ "PBiCG" ],
+	"fvSolution_solvers_UFinal_preconditioner": [ "DILU" ]
+    }
+}

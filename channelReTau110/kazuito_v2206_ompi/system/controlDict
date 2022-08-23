@@ -1,0 +1,52 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v1912                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+#include "$FOAM_CASE/include/controlDict"
+functions
+{
+    fieldAverage1
+    {
+        // Type of functionObject
+        type            fieldAverage;
+
+        // Where to load it from (if not already in solver)
+        functionObjectLibs ( "libfieldFunctionObjects.so" );
+
+        // Function object enabled flag
+        enabled         true;
+
+        // When to output the average fields
+        writeControl    writeTime;
+        outputControl   outputTime;
+
+        // Fields to be averaged - runTime modifiable
+        fields
+        (
+            U
+            {
+                mean        on;
+                prime2Mean  on;
+                base        time;
+            }
+
+            p
+            {
+                mean        on;
+                prime2Mean  on;
+                base        time;
+            }
+        );
+    }
+}

@@ -1,0 +1,15 @@
+application       pimpleFoam;
+startFrom         startTime;
+startTime         0;
+stopAt            endTime;
+writeControl      runTime;
+deltaT            0.004;
+endTime           0.204;
+writeInterval     1;
+purgeWrite        0;
+writeFormat       binary;
+writePrecision    6;
+writeCompression  off;
+timeFormat        general;
+timePrecision     6;
+runTimeModifiable false;

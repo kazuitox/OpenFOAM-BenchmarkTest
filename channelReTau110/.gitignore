@@ -1,0 +1,6 @@
+log.*
+*.db
+polyMesh/
+tmp/
+old/
+cases/

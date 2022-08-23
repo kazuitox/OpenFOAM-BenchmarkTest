@@ -1,0 +1,3 @@
+#Value,mx,my,mz,decomposeParDict_node,decomposeParDict_ppn,decomposeParDict_method,fvSolution_solvers_p_relTol,fvSolution_solvers_p_solver,fvSolution_solvers_p_preconditioner,fvSolution_solvers_pFinal_solver,fvSolution_solvers_pFinal_preconditioner,fvSolution_solvers_UFinal_solver,fvSolution_solvers_UFinal_preconditioner
+27.37,762,412,306,4,36,scotch,0.05,PCG,DIC,PCG,DIC,PBiCG,DILU
+41.395,762,412,306,8,36,scotch,0.05,PCG,DIC,PCG,DIC,PBiCG,DILU

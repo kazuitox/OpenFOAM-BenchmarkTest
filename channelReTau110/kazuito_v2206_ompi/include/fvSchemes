@@ -1,0 +1,34 @@
+ddtSchemes
+{
+  default CrankNicolson 1;
+}
+gradSchemes
+{
+  default Gauss linear;
+}
+divSchemes
+{
+  default Gauss linear;
+  div(phi,nuTilda) Gauss limitedLinear 1;
+}
+laplacianSchemes
+{
+  default Gauss linear orthogonal;
+}
+interpolationSchemes
+{
+  default linear;
+}
+snGradSchemes
+{
+  default orthogonal;
+}
+wallDist
+{
+  method meshWave;
+}
+fluxRequired
+{
+  default no;
+  p;
+}

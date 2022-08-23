@@ -1,0 +1,36 @@
+solvers
+{
+  p
+  {
+    relTol 0.05;
+    tolerance 1e-6;
+    maxIter 5000;
+    solver PCG;
+    preconditioner DIC;
+  };
+  pFinal
+  {
+    relTol 0;
+    tolerance 1e-6;
+    maxIter 5000;
+    solver PCG;
+    preconditioner DIC;
+  }
+  UFinal
+  {
+    solver PBiCG;
+    preconditioner DILU;
+    tolerance 1e-05;
+    relTol 0.1;
+    maxIter 5000;
+    relTol 0;
+  }
+}
+PIMPLE
+{
+  nOuterCorrectors 1;
+  nCorrectors 2;
+  nNonOrthogonalCorrectors 0;
+  pRefCell 0;
+  pRefValue 0;
+}
